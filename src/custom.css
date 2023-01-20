@@ -1,0 +1,16 @@
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+.footer {
+    background-color: brown;
+    color: white;
+    padding: 50px;
+    font-size: 5em;
+    margin: 20px;
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+}

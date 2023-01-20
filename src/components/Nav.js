@@ -1,11 +1,14 @@
 const Nav = (props) => {
     return (
         <nav className="nav-bar">
+            <div className="row">
+            <img src={props.logo} alt="Little Lemon"></img>
             <ul>
-                <li><img src={props.logo} alt="Little Lemon"></img></li>
+                <li></li>
                 <li><a href="#">Home</a></li>
                 <li>About</li>
             </ul>
+            </div>
         </nav>
     );
   };

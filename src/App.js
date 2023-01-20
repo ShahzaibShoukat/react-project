@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Nav from "./components/Nav";
 import Main from './components/Main';
 import logo from "./images/Logo.svg"
+import './responsive.css'
+import './custom.css'
 
 
 function App() {
