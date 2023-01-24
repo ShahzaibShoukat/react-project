@@ -1,13 +1,16 @@
 const Footer = () => {
     return (
-        <footer className="test">
-          <div className="col-3 col-s-5 footer">
+        <footer className="footer">
+          <div className="">
           This is footer
           </div>
-          <div className="col-3 col-s-5 footer">
+          <div className="">
           This is footer
           </div>
-          <div className="col-3 col-s-5 footer">
+          <div className="">
+          This is footer
+          </div>
+          <div className="">
           This is footer
           </div>
         </footer>
