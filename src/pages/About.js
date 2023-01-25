@@ -1,5 +1,9 @@
 const About = () => {
-    return <h1 className="text-center page-height">About Us</h1>;
-  };
-  
-  export default About;
+  return(
+    <div className="text-center page-height">
+      <h1>About Page</h1>
+    </div>
+  )
+};
+
+export default About;
