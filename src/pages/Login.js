@@ -1,5 +1,9 @@
 const Login = () => {
-    return <h1 className="text-center page-height">Login Page</h1>;
-  };
-  
-  export default Login;
+    return (
+      <div className="text-center page-height">
+        <h1>Login Page</h1>
+      </div>
+    );
+};
+
+export default Login;

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
+
 const BookingForm = (props) => {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("17:00");
@@ -11,9 +13,13 @@ const BookingForm = (props) => {
         setOccasion("");
     };
 
+    let bookingState1 = props.bookingState;
+
+    const onSuccess = useNavigate();
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Information Submitted!", {date}, {guests});
+        if(bookingState1 == true) {onSuccess('/booking-confirmation')};
         clearForm();
     };
 
