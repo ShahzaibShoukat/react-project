@@ -209,6 +209,16 @@ nav {
 .reservation form {
   display: grid;
   max-width: 200px;
-  gap: 20px;
-  padding-bottom: 20px;
+  gap: 10px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+.reservation form label {
+  padding-top: 15px;
+}
+
+.star {
+  color: red;
+  font-size: 1.5rem;
 }
