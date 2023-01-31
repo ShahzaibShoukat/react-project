@@ -1,15 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 
-
-const PasswordErrorMessage = () => {
-    return (
-      <p className="FieldError">Password should have at least 8 characters</p>
-    );
-};
-
-
-
 const BookingForm = (props) => {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("00:00");
@@ -28,29 +19,30 @@ const BookingForm = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(bookingState1 === true) {onSuccess('/booking-confirmation')};
+        onSuccess('/booking-confirmation');
         clearForm();
     };
 
     const getIsFormValid = () => {
         return (
           date &&
-          time !== "select-time" &&
+          time !== "00:00" &&
           guests > 0 &&
-          occasion !== "select-occasion"
+          occasion !== "occasion"
         );
     };
 
     return (
-        <div className="reservation">
-            <h1 className="text-center">Available time<br></br>{props.availableTimes.join(" | ")}</h1>
-            <form onSubmit={handleSubmit}>
+        <div className="d-flex jc-center ai-center">
+            <div className="form-reservation p-2 m-2 shadow radius">
+            <h2 className="mb-1">Reservation form</h2>
+            <form onSubmit={handleSubmit} className="reservation">
                 <label htmlFor="res-date">Choose date<strong className="star">*</strong></label>
                 <input value={date} onChange={(e) => {setDate(e.target.value);}}
-                    type="date" id="res-date" aria-label="Choose date" />
+                    type="date" id="res-date" aria-label="Choose date" className="pb" />
                 <label htmlFor="res-time" aria-label="Choose time" >Choose time<strong className="star">*</strong></label>
-                <select id="res-time" value={time} onChange={(e) => {setTime(e.target.value);}}>
-                <option value={"select-time"}>Select Time</option>
+                <select id="res-time" value={time} onChange={(e) => {setTime(e.target.value);}} className="pb">
+                <option value={"00:00"}>Select Time</option>
                     {props.availableTimes.map((time) => <option value={time}>{time}</option>)}
                 </select>
                 <label htmlFor="guests">Number of guests<strong className="star">*</strong></label>
@@ -58,14 +50,15 @@ const BookingForm = (props) => {
                     type="number" placeholder="1" min="0" max="20" id="guests" aria-label="Number of guests" />
                 <label htmlFor="occasion" aria-label="Occasion">Occasion<strong className="star">*</strong></label>
                 <select id="occasion" value={occasion} onChange={(e) => {setOccasion(e.target.value);}}>
-                    <option value="select-occasion">Select Occasion</option>
+                    <option value="occasion">Select Occasion</option>
                     <option value="birthday">Birthday</option>
                     <option value="anniversary">Anniversary</option>
                 </select>
-                <button disabled={!getIsFormValid()} type="submit">
+                <button className="mt-1 btn" disabled={!getIsFormValid()} type="submit">
                     Make Your reservation
                 </button>
             </form>
+            </div>
         </div>
     );
 };

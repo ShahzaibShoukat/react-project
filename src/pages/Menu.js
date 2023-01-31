@@ -12,11 +12,7 @@ const Menu = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
     return(
       <div className="text-center page-height">
-        <h1>Blog Articles</h1>
-        <h1>Learning useReducer Hook<br></br>Money : {state.money}</h1>
-        <button onClick={() => dispatch({type: "Plus"})}>Plus</button>
-        <button onClick={() => dispatch({type: "Minus"})}>Substract</button>
-        <button onClick={() => dispatch({type: "Tip"})}>Tip</button>
+        <h1>Menu Page</h1>
       </div>
     )
   };
