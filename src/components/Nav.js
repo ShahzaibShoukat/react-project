@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-
 
 const Nav = () => {
     let menuButton = () => {
@@ -23,7 +21,7 @@ const Nav = () => {
     return (
         <nav>
           <div className="container d-flex jc-space-between">
-            <img src="http://localhost:3000/logo.svg" className="ms-1" alt="Little lemon"></img>
+            <img src="/logo.svg" className="ms-1" alt="Little lemon"></img>
             <div className="nav-bar">
               <div className="topnav" id="myTopnav">
                 <Link className="active" to="/">Home</Link>

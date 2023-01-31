@@ -16,7 +16,7 @@ const Hero = () => {
                   <Link className="btn" to="/reservation">Reserve a Table</Link>
                 </div>
               </div>
-              <div><img src={restauranfood1} className="radius" width="100%"></img></div>
+              <div><img alt="restaurant-food" src={restauranfood1} className="radius" width="100%"></img></div>
             </div>
           </div>
         </header>

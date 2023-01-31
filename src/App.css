@@ -214,13 +214,14 @@ a:hover {
   border-radius: var(--radius);
   color: var(--highlight-dark-color);
   text-align: center;
-  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 2rem;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
   transition: .3s;
   height: max-content;
-  box-shadow: var(--shadow)
+  box-shadow: var(--shadow);
+  border: none;
 }
 
 .btn:hover {
@@ -228,11 +229,25 @@ a:hover {
   border-radius: var(--radius);
   color: var(--highlight-light-color);
   text-align: center;
-  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 2rem;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
   height: max-content;
+  box-shadow: var(--shadow)
+}
+
+.btn:disabled {
+  background-color: var(--highlight-light-color);
+  border-radius: var(--radius);
+  color: var(--highlight-dark-color);
+  text-align: center;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: max-content;
+  box-shadow: var(--shadow)
 }
 
 /* Header CSS */
@@ -403,6 +418,6 @@ nav {
 }
 
 .star {
-  color: red;
-  font-size: 1.5rem;
+  color: rgb(255, 70, 70);
+  font-size: 1.2rem;
 }

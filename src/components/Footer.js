@@ -3,7 +3,7 @@ const Footer = () => {
         <footer className="footer">
           <div className="container py-3 px-1">
             <div className="footer-grid jc-center">
-              <img src="http://localhost:3000/logo-footer.png" width="auto" height="100px"></img>
+              <img alt="footer-logo"src="/logo-footer.png" width="auto" height="100px"></img>
               <div>
                 <p>Navigation</p>
                 <ul>
@@ -23,9 +23,9 @@ const Footer = () => {
               </div>
               <div>
                 <p>Contact Us</p>
-                <span><img src="http://localhost:3000/facebook.png" width="50px" height="auto"></img></span>
-                <span><img src="http://localhost:3000/instagram.png" width="50px" height="auto"></img></span>
-                <span><img src="http://localhost:3000/youtube.png" width="50px" height="auto"></img></span>
+                <span><img alt="facebook-icon" src="/facebook.png" width="50px" height="auto"></img></span>
+                <span><img alt="instagram-icon" src="/instagram.png" width="50px" height="auto"></img></span>
+                <span><img alt="youtube-icon" src="/youtube.png" width="50px" height="auto"></img></span>
               </div>
             </div>
           </div>
